@@ -43,8 +43,10 @@ square ride `contributes` and plain CSS.
   platforms on the author's macOS result. The value chosen is the exact macOS
   composite (0.74 x 0.40), so the author's own view is unchanged (alpha differs
   by 0.0008).
-- Restored the git-graph commit lane ramp and the composer selector chips that
-  were missing from the 0.1.1 market copy.
+- Dropped the git-graph commit lane ramp and the composer selector chip rules
+  carried over from 0.1.1: both anchor on `data-gitgraph-*`, which the retired
+  `dsh-git-graph` plugin was the only producer of. They matched nothing in a
+  current install, so they are removed rather than left as dead selectors.
 - Anchors are the stable hooks stamped by the dsh-web-all compat layer
   (`[data-pane="sidebar"]`, `[data-dsh-frame]`), with the CSS-Modules class
   substring only as a fallback. Verified against a live page: applying the same

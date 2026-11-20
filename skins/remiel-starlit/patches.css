@@ -122,136 +122,55 @@ button[role='tab']:active:not(:disabled) {
   backdrop-filter: blur(12px);
 }
 
-:global(.aionui-root) {
+.aionui-root {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
 
-:global(.aionui-dialog),
-:global(.aionui-menu),
-:global(.aionui-toast) {
+.aionui-dialog,
+.aionui-menu,
+.aionui-toast {
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
 
-:global(.aionui-overlay) {
+.aionui-overlay {
   background: rgba(65, 35, 58, 0.4);
 }
 
-body[data-ds-dark-theme] :global(.aionui-overlay) {
+body[data-ds-dark-theme] .aionui-overlay {
   background: rgba(7, 4, 11, 0.55);
 }
 
 /* aionui panel: drag handles glow with the cherry pink on hover. */
-:global(.aionui-explorer-handle),
-:global(.aionui-preview-handle) {
+.aionui-explorer-handle,
+.aionui-preview-handle {
   background: rgba(120, 82, 115, 0.2);
 }
 
-:global(.aionui-explorer-handle):hover,
-:global(.aionui-preview-handle):hover {
+.aionui-explorer-handle:hover,
+.aionui-preview-handle:hover {
   background: #d75b8d;
   box-shadow: 0 0 6px rgba(215, 91, 141, 0.4);
 }
 
-body[data-ds-dark-theme] :global(.aionui-explorer-handle),
-body[data-ds-dark-theme] :global(.aionui-preview-handle) {
+body[data-ds-dark-theme] .aionui-explorer-handle,
+body[data-ds-dark-theme] .aionui-preview-handle {
   background: rgba(232, 200, 222, 0.2);
 }
 
-body[data-ds-dark-theme] :global(.aionui-explorer-handle):hover,
-body[data-ds-dark-theme] :global(.aionui-preview-handle):hover {
+body[data-ds-dark-theme] .aionui-explorer-handle:hover,
+body[data-ds-dark-theme] .aionui-preview-handle:hover {
   background: #e891b3;
   box-shadow: 0 0 6px rgba(232, 145, 179, 0.4);
 }
 
-:global(.aionui-menu-item:not(.aionui-menu-item-disabled):hover) {
+.aionui-menu-item:not(.aionui-menu-item-disabled):hover {
   background: rgba(215, 91, 141, 0.12);
 }
 
-body[data-ds-dark-theme] :global(.aionui-menu-item:not(.aionui-menu-item-disabled):hover) {
+body[data-ds-dark-theme] .aionui-menu-item:not(.aionui-menu-item-disabled):hover {
   background: rgba(232, 145, 179, 0.16);
-}
-
-/* --- git-graph commit lanes: cherry pink / sage / amber / ice ramp -------- */
-
-[data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n+1),
-[data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n+1) { color: #d75b8d; }
-[data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n+2),
-[data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n+2) { color: #3d9369; }
-[data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n+3),
-[data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n+3) { color: #ce9038; }
-[data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n+4),
-[data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n+4) { color: #667b8b; }
-[data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n+5),
-[data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n+5) { color: #926e7d; }
-[data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n),
-[data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n) { color: #a9cbb6; }
-
-/* Night variant: the same hue family, lifted for the indigo night. */
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n+1),
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n+1) { color: #e891b3; }
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n+2),
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n+2) { color: #7ed9a5; }
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n+3),
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n+3) { color: #f0bf67; }
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n+4),
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n+4) { color: #94a7b4; }
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n+5),
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n+5) { color: #ad91a0; }
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='node']:nth-child(6n),
-body[data-ds-dark-theme] [data-gitgraph-lanes] > [data-gitgraph-glyph='merge']:nth-child(6n) { color: #5dbd85; }
-
-/* Dialog frame: frosted glass like the panel columns. */
-[data-gitgraph-dialog] {
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  border-color: rgba(242, 207, 229, 0.4);
-}
-
-body[data-ds-dark-theme] [data-gitgraph-dialog] {
-  border-color: rgba(242, 207, 229, 0.22);
-}
-
-/* Ref badges (non-current): translucent cherry chips. */
-[data-gitgraph-ref]:not([data-gitgraph-ref-current]) {
-  background: rgba(215, 91, 141, 0.12);
-  border: 1px solid rgba(104, 66, 98, 0.2);
-}
-
-body[data-ds-dark-theme] [data-gitgraph-ref]:not([data-gitgraph-ref-current]) {
-  background: rgba(232, 145, 179, 0.14);
-  border-color: rgba(242, 207, 229, 0.2);
-}
-
-/* --- composer selector row: crisp frosted chips --------------------------- */
-
-div:has(> div > [data-gitgraph-chip]) {
-  --dsw-alias-button-tool-bar-fill: rgba(255, 250, 254, 0.72);
-  --dsw-alias-border-l2: rgba(104, 66, 98, 0.3);
-  --dsw-alias-label-secondary: #594357;
-  --dsw-alias-label-tertiary: #806e80;
-  --dsw-alias-interactive-bg-hover: rgba(215, 91, 141, 0.16);
-  --dsw-alias-interactive-bg-active: rgba(215, 91, 141, 0.2);
-}
-
-body[data-ds-dark-theme] div:has(> div > [data-gitgraph-chip]) {
-  --dsw-alias-button-tool-bar-fill: rgba(73, 48, 82, 0.78);
-  --dsw-alias-border-l2: rgba(242, 207, 229, 0.3);
-  --dsw-alias-label-secondary: #decad8;
-  --dsw-alias-label-tertiary: #b9a6b7;
-  --dsw-alias-interactive-bg-hover: rgba(232, 145, 179, 0.16);
-  --dsw-alias-interactive-bg-active: rgba(232, 145, 179, 0.22);
-}
-
-div:has(> div > [data-gitgraph-chip]) > button[aria-expanded='true'],
-[data-gitgraph-chip][aria-expanded='true'] {
-  background-color: rgba(215, 91, 141, 0.16);
-}
-
-body[data-ds-dark-theme] div:has(> div > [data-gitgraph-chip]) > button[aria-expanded='true'],
-body[data-ds-dark-theme] [data-gitgraph-chip][aria-expanded='true'] {
-  background-color: rgba(232, 145, 179, 0.18);
 }
 
 /* --- composer seat: frosted fade band over the art ------------------------ */
@@ -358,23 +277,31 @@ body[data-ds-dark-theme] [role="dialog"] * {
    1) 侧栏锁定为作者本机的实际合成值；
    2) 帧本体底色中和为透明（Windows 独有，macOS 本就是 0 0，设置无害），
       使两边中栏/底栏都回到 bg-base 的 0.62 / 0.48；
-   3) Windows 标题栏拖拽条的 ::before 同步锁值，否则顶栏会比侧栏更实。
+   3) Windows 标题栏拖拽条（挂 .frame::before）同步锁值，否则顶栏会比侧栏更实。
 
    锚点说明：本 build 的侧栏 DOM 只有 CSS-Modules 哈希类名，没有 data-slot /
    data-dsh-surface；稳定的钩子是 dsh-web-all 兼容层补打的 [data-pane='sidebar']
    （由 [class*="sidebarCol"] 映射而来），故两套写法并行兜底。 */
 
-/* 1) 侧栏：锁定到作者本机（macOS）的实际合成值 */
-[data-pane='sidebar'],
-[data-dsh-surface='sidebar'],
-[class*='sidebarCol'] {
+/* 1) 侧栏：锁定到作者本机（macOS）的实际合成值。
+      前置限定 [data-dsh-frame]:not([data-sidebar-drawer]):not([data-sidebar-collapsed])
+      是必需的，不是保险：
+      - 抽屉态（data-sidebar-drawer）是窄屏浮层，本来就该是实心面板，锁成 0.3
+        会让底下正文透上来；
+      - 收起态（data-sidebar-collapsed）在 <=768px 由兼容层给出 52px 宽的竖条并
+        声明 background: transparent !important（dsh-web-all 0-3-0）。本规则转换
+        后是 0-3-2，同时带 !important 时按权重取胜，会把那条通明覆盖成半透明暗色，
+        在左侧留下一条多余竖条。限定后两条规则互不重叠。 */
+[data-dsh-frame]:not([data-sidebar-drawer]):not([data-sidebar-collapsed]) [data-pane='sidebar'],
+[data-dsh-frame]:not([data-sidebar-drawer]):not([data-sidebar-collapsed]) [data-dsh-surface='sidebar'],
+[data-dsh-frame]:not([data-sidebar-drawer]):not([data-sidebar-collapsed]) [class*='sidebarCol'] {
   background-color: rgba(250, 242, 251, 0.3) !important;
   background-image: none !important;
 }
 
-body[data-ds-dark-theme] [data-pane='sidebar'],
-body[data-ds-dark-theme] [data-dsh-surface='sidebar'],
-body[data-ds-dark-theme] [class*='sidebarCol'] {
+body[data-ds-dark-theme] [data-dsh-frame]:not([data-sidebar-drawer]):not([data-sidebar-collapsed]) [data-pane='sidebar'],
+body[data-ds-dark-theme] [data-dsh-frame]:not([data-sidebar-drawer]):not([data-sidebar-collapsed]) [data-dsh-surface='sidebar'],
+body[data-ds-dark-theme] [data-dsh-frame]:not([data-sidebar-drawer]):not([data-sidebar-collapsed]) [class*='sidebarCol'] {
   background-color: rgba(31, 20, 39, 0.29) !important;
   background-image: none !important;
 }
@@ -387,14 +314,21 @@ body[data-ds-dark-theme] [class*='sidebarCol'] {
   background: transparent !important;
 }
 
-/* 3) Windows 标题栏拖拽条：独立实色块（inset:0 0 auto），单列锁值。
-      仅 Windows 存在（[data-windows-titlebar] 只在 Windows build 上置位）。 */
-[data-windows-titlebar]::before {
+/* 3) Windows 标题栏拖拽条：实色块（inset:0 0 auto），单列锁值。
+      锚点是 [data-dsh-frame]::before 而不是 [data-windows-titlebar]::before：
+      该属性挂在 <html> 上（renderer 读 document.documentElement 判断），
+      而 transformSkinCss 把每条选择器都强制前缀成
+      html[data-dsh-skin="<id>"] <你的选择器>——[data-windows-titlebar] 于是变成
+      html 的后代选择器，永远匹配不到 html 自己。
+      官方 AppFrame.module.css 里唯一给 .frame::before 设 content: '' 的正是
+      [data-windows-titlebar] 分支，所以改写 .frame 的 ::before 即可锁住顶栏，
+      且 macOS 上该伪元素没有 content，规则落空、无副作用。 */
+[data-dsh-frame]::before {
   background-color: rgba(250, 242, 251, 0.3) !important;
   background-image: none !important;
 }
 
-body[data-ds-dark-theme] [data-windows-titlebar]::before {
+body[data-ds-dark-theme] [data-dsh-frame]::before {
   background-color: rgba(31, 20, 39, 0.29) !important;
   background-image: none !important;
 }
@@ -422,10 +356,10 @@ body[data-ds-dark-theme] [data-rightbar-col] {
 
 button,
 a,
-:global(.aionui-btn),
-:global(.aionui-menu-item),
-:global(.aionui-explorer-handle),
-:global(.aionui-preview-handle) {
+.aionui-btn,
+.aionui-menu-item,
+.aionui-explorer-handle,
+.aionui-preview-handle {
   transition: background-color 0.13s ease, border-color 0.13s ease,
     box-shadow 0.13s ease, color 0.13s ease, opacity 0.13s ease;
 }
@@ -452,8 +386,8 @@ body[data-ds-dark-theme] a:active {
 }
 
 button:disabled,
-:global(.aionui-btn:disabled),
-:global(.aionui-menu-item-disabled) {
+.aionui-btn:disabled,
+.aionui-menu-item-disabled {
   opacity: 0.55;
   cursor: not-allowed;
 }
@@ -461,10 +395,10 @@ button:disabled,
 @media (prefers-reduced-motion: reduce) {
   button,
   a,
-  :global(.aionui-btn),
-  :global(.aionui-menu-item),
-  :global(.aionui-explorer-handle),
-  :global(.aionui-preview-handle),
+  .aionui-btn,
+  .aionui-menu-item,
+  .aionui-explorer-handle,
+  .aionui-preview-handle,
   ::-webkit-scrollbar-thumb {
     transition: none;
   }
